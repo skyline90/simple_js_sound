@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка со звуком</title>
+    <link rel="shortcut icon" href="icon_sound.png" type="image/x-icon">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #2c3e50;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+        }
+
+        div {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid #e74c3c;
+            border-radius: 0.6em;
+            color: #e74c3c;
+            cursor: pointer;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-self: center;
+            -ms-flex-item-align: center;
+            align-self: center;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1;
+            margin: 20px;
+            padding: 1.2em 2.8em;
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            color: #fff;
+            outline: 0;
+        }
+
+        button {
+            border-color: #3498db;
+            color: #fff;
+            box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+            -webkit-transition: all 150ms ease-in-out;
+            transition: all 150ms ease-in-out;
+        }
+
+        button {
+            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button class="btn">Клик</button>
+    </div>
+
+    <script>
+        document.querySelector("button").onclick = function () {
+            let audio = new Audio(); // Создаём новый элемент Audio
+            audio.src = 'click.mp3'; // Указываем путь к звуку "клика"
+            audio.autoplay = true; // Автоматически запускаем
+        }
+    </script>
+</body>
+
+</html>
